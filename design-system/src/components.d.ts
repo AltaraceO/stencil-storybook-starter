@@ -11,7 +11,13 @@ export namespace Components {
         "last"?: string;
     }
     interface RoundButton {
+        "border"?: 'round' | 'square';
+        "size"?: 'small' | 'large';
         "text"?: string;
+        "type"?: 'normal' | 'main';
+    }
+    interface TextLinks {
+        "text": string;
     }
 }
 declare global {
@@ -27,9 +33,16 @@ declare global {
         prototype: HTMLRoundButtonElement;
         new (): HTMLRoundButtonElement;
     };
+    interface HTMLTextLinksElement extends Components.TextLinks, HTMLStencilElement {
+    }
+    var HTMLTextLinksElement: {
+        prototype: HTMLTextLinksElement;
+        new (): HTMLTextLinksElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "round-button": HTMLRoundButtonElement;
+        "text-links": HTMLTextLinksElement;
     }
 }
 declare namespace LocalJSX {
@@ -38,11 +51,18 @@ declare namespace LocalJSX {
         "last"?: string;
     }
     interface RoundButton {
+        "border"?: 'round' | 'square';
+        "size"?: 'small' | 'large';
+        "text"?: string;
+        "type"?: 'normal' | 'main';
+    }
+    interface TextLinks {
         "text"?: string;
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
         "round-button": RoundButton;
+        "text-links": TextLinks;
     }
 }
 export { LocalJSX as JSX };
@@ -51,6 +71,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "round-button": LocalJSX.RoundButton & JSXBase.HTMLAttributes<HTMLRoundButtonElement>;
+            "text-links": LocalJSX.TextLinks & JSXBase.HTMLAttributes<HTMLTextLinksElement>;
         }
     }
 }

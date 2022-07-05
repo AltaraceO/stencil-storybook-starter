@@ -1,0 +1,57 @@
+@import '../../styles/variables';
+
+button {
+  color: $textBlack;
+  font-size: 14px;
+  font-family: $font-family;
+  line-height: 20px;
+  background: transparent;
+  cursor: pointer;
+  transition: all ease-in-out 0.1s;
+
+  &:hover {
+    background-color: $backgroundGrey;
+  }
+  &:active {
+    background-color: $activeGrey;
+  }
+  &:disabled {
+    opacity: 0.4;
+  }
+
+  //* types
+  &.normal {
+    border: 1px solid $backgroundGrey;
+  }
+  &.main {
+    color: #fff;
+    background-color: $blue;
+    border: 1px solid $blue;
+
+    &:hover {
+      background-color: $darkBlue;
+    }
+  }
+
+  //*Sizes
+  &.small {
+    padding: 8px 12px;
+  }
+
+  &.large {
+    padding: 10px 15px;
+  }
+
+  //*Borders
+  &.round {
+    border-radius: 1rem;
+  }
+
+  &.square {
+    border-radius: 0.4rem;
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $textGrey;
+    }
+  }
+}
