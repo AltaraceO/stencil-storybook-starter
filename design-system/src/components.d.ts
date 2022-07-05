@@ -23,6 +23,11 @@ export namespace Components {
         "text"?: string;
         "type"?: 'normal' | 'main';
     }
+    interface SearchBar {
+        "buttons": string[];
+    }
+    interface SearchInput {
+    }
     interface TextLinks {
         "text": string;
     }
@@ -52,6 +57,18 @@ declare global {
         prototype: HTMLRoundButtonElement;
         new (): HTMLRoundButtonElement;
     };
+    interface HTMLSearchBarElement extends Components.SearchBar, HTMLStencilElement {
+    }
+    var HTMLSearchBarElement: {
+        prototype: HTMLSearchBarElement;
+        new (): HTMLSearchBarElement;
+    };
+    interface HTMLSearchInputElement extends Components.SearchInput, HTMLStencilElement {
+    }
+    var HTMLSearchInputElement: {
+        prototype: HTMLSearchInputElement;
+        new (): HTMLSearchInputElement;
+    };
     interface HTMLTextLinksElement extends Components.TextLinks, HTMLStencilElement {
     }
     var HTMLTextLinksElement: {
@@ -63,6 +80,8 @@ declare global {
         "my-component": HTMLMyComponentElement;
         "nav-bar": HTMLNavBarElement;
         "round-button": HTMLRoundButtonElement;
+        "search-bar": HTMLSearchBarElement;
+        "search-input": HTMLSearchInputElement;
         "text-links": HTMLTextLinksElement;
     }
 }
@@ -84,6 +103,11 @@ declare namespace LocalJSX {
         "text"?: string;
         "type"?: 'normal' | 'main';
     }
+    interface SearchBar {
+        "buttons"?: string[];
+    }
+    interface SearchInput {
+    }
     interface TextLinks {
         "text"?: string;
     }
@@ -92,6 +116,8 @@ declare namespace LocalJSX {
         "my-component": MyComponent;
         "nav-bar": NavBar;
         "round-button": RoundButton;
+        "search-bar": SearchBar;
+        "search-input": SearchInput;
         "text-links": TextLinks;
     }
 }
@@ -103,6 +129,8 @@ declare module "@stencil/core" {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "nav-bar": LocalJSX.NavBar & JSXBase.HTMLAttributes<HTMLNavBarElement>;
             "round-button": LocalJSX.RoundButton & JSXBase.HTMLAttributes<HTMLRoundButtonElement>;
+            "search-bar": LocalJSX.SearchBar & JSXBase.HTMLAttributes<HTMLSearchBarElement>;
+            "search-input": LocalJSX.SearchInput & JSXBase.HTMLAttributes<HTMLSearchInputElement>;
             "text-links": LocalJSX.TextLinks & JSXBase.HTMLAttributes<HTMLTextLinksElement>;
         }
     }
