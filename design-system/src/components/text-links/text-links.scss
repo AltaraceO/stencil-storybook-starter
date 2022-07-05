@@ -1,10 +1,16 @@
 @import '../../styles/variables';
 
-p {
+.link {
   width: auto;
   height: 100%;
   padding: 0;
+  font-weight: 500;
+  font-size: 16px;
   font-family: $font-family;
-  border-bottom: 2px solid $textBlack;
+  border-bottom: 2px solid transparent;
   cursor: pointer;
+
+  &:hover {
+    border-bottom: 2px solid $textBlack;
+  }
 }

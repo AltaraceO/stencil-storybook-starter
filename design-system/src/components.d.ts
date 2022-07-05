@@ -14,6 +14,8 @@ export namespace Components {
         "last"?: string;
     }
     interface NavBar {
+        "buttons"?: string[];
+        "links"?: string[];
     }
     interface RoundButton {
         "border"?: 'round' | 'square';
@@ -73,6 +75,8 @@ declare namespace LocalJSX {
         "last"?: string;
     }
     interface NavBar {
+        "buttons"?: string[];
+        "links"?: string[];
     }
     interface RoundButton {
         "border"?: 'round' | 'square';

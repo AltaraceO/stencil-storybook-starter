@@ -8,6 +8,6 @@ export class TextLinks {
   @Prop() text: string;
 
   render() {
-    return <p>{this.text}</p>;
+    return <div class="link">{this.text}</div>;
   }
 }
