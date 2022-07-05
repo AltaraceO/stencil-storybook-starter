@@ -12,6 +12,12 @@ const Template: Story<Components.MyComponent> = ({ first, last }) => {
 
 export const Default: Story<Components.MyComponent> = Template.bind({});
 Default.args = {
-  first: 'John',
-  last: 'Doe',
+  first: 'Oohn',
+  last: '0Soe',
+};
+
+export const Ori: Story<Components.MyComponent> = Template.bind({});
+Ori.args = {
+  first: 'Ori ',
+  last: 'Altarace',
 };

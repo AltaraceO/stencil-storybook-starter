@@ -10,6 +10,9 @@ export namespace Components {
         "first"?: string;
         "last"?: string;
     }
+    interface RoundButton {
+        "text"?: string;
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -18,8 +21,15 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLRoundButtonElement extends Components.RoundButton, HTMLStencilElement {
+    }
+    var HTMLRoundButtonElement: {
+        prototype: HTMLRoundButtonElement;
+        new (): HTMLRoundButtonElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "round-button": HTMLRoundButtonElement;
     }
 }
 declare namespace LocalJSX {
@@ -27,8 +37,12 @@ declare namespace LocalJSX {
         "first"?: string;
         "last"?: string;
     }
+    interface RoundButton {
+        "text"?: string;
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "round-button": RoundButton;
     }
 }
 export { LocalJSX as JSX };
@@ -36,6 +50,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "round-button": LocalJSX.RoundButton & JSXBase.HTMLAttributes<HTMLRoundButtonElement>;
         }
     }
 }
