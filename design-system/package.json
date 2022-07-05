@@ -28,7 +28,9 @@
     "test:watch": "npm run test -- --watchAll"
   },
   "dependencies": {
-    "@stencil/core": "2.13.0"
+    "@stencil/core": "2.13.0",
+    "@storybook/preset-scss": "^1.0.3",
+    "sass": "^1.53.0"
   },
   "devDependencies": {
     "@stencil/sass": "1.5.2",

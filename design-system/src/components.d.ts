@@ -6,9 +6,14 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface ImageLinks {
+        "image": string;
+    }
     interface MyComponent {
         "first"?: string;
         "last"?: string;
+    }
+    interface NavBar {
     }
     interface RoundButton {
         "border"?: 'round' | 'square';
@@ -21,11 +26,23 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLImageLinksElement extends Components.ImageLinks, HTMLStencilElement {
+    }
+    var HTMLImageLinksElement: {
+        prototype: HTMLImageLinksElement;
+        new (): HTMLImageLinksElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
+    };
+    interface HTMLNavBarElement extends Components.NavBar, HTMLStencilElement {
+    }
+    var HTMLNavBarElement: {
+        prototype: HTMLNavBarElement;
+        new (): HTMLNavBarElement;
     };
     interface HTMLRoundButtonElement extends Components.RoundButton, HTMLStencilElement {
     }
@@ -40,15 +57,22 @@ declare global {
         new (): HTMLTextLinksElement;
     };
     interface HTMLElementTagNameMap {
+        "image-links": HTMLImageLinksElement;
         "my-component": HTMLMyComponentElement;
+        "nav-bar": HTMLNavBarElement;
         "round-button": HTMLRoundButtonElement;
         "text-links": HTMLTextLinksElement;
     }
 }
 declare namespace LocalJSX {
+    interface ImageLinks {
+        "image"?: string;
+    }
     interface MyComponent {
         "first"?: string;
         "last"?: string;
+    }
+    interface NavBar {
     }
     interface RoundButton {
         "border"?: 'round' | 'square';
@@ -60,7 +84,9 @@ declare namespace LocalJSX {
         "text"?: string;
     }
     interface IntrinsicElements {
+        "image-links": ImageLinks;
         "my-component": MyComponent;
+        "nav-bar": NavBar;
         "round-button": RoundButton;
         "text-links": TextLinks;
     }
@@ -69,7 +95,9 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "image-links": LocalJSX.ImageLinks & JSXBase.HTMLAttributes<HTMLImageLinksElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "nav-bar": LocalJSX.NavBar & JSXBase.HTMLAttributes<HTMLNavBarElement>;
             "round-button": LocalJSX.RoundButton & JSXBase.HTMLAttributes<HTMLRoundButtonElement>;
             "text-links": LocalJSX.TextLinks & JSXBase.HTMLAttributes<HTMLTextLinksElement>;
         }
