@@ -6,6 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface HeaderButtons {
+        "buttons": string[];
+    }
     interface ImageLinks {
         "image": string;
     }
@@ -33,6 +36,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLHeaderButtonsElement extends Components.HeaderButtons, HTMLStencilElement {
+    }
+    var HTMLHeaderButtonsElement: {
+        prototype: HTMLHeaderButtonsElement;
+        new (): HTMLHeaderButtonsElement;
+    };
     interface HTMLImageLinksElement extends Components.ImageLinks, HTMLStencilElement {
     }
     var HTMLImageLinksElement: {
@@ -76,6 +85,7 @@ declare global {
         new (): HTMLTextLinksElement;
     };
     interface HTMLElementTagNameMap {
+        "header-buttons": HTMLHeaderButtonsElement;
         "image-links": HTMLImageLinksElement;
         "my-component": HTMLMyComponentElement;
         "nav-bar": HTMLNavBarElement;
@@ -86,6 +96,9 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface HeaderButtons {
+        "buttons"?: string[];
+    }
     interface ImageLinks {
         "image"?: string;
     }
@@ -112,6 +125,7 @@ declare namespace LocalJSX {
         "text"?: string;
     }
     interface IntrinsicElements {
+        "header-buttons": HeaderButtons;
         "image-links": ImageLinks;
         "my-component": MyComponent;
         "nav-bar": NavBar;
@@ -125,6 +139,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "header-buttons": LocalJSX.HeaderButtons & JSXBase.HTMLAttributes<HTMLHeaderButtonsElement>;
             "image-links": LocalJSX.ImageLinks & JSXBase.HTMLAttributes<HTMLImageLinksElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "nav-bar": LocalJSX.NavBar & JSXBase.HTMLAttributes<HTMLNavBarElement>;

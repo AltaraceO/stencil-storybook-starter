@@ -1,7 +1,8 @@
-import { Component, h, Host, Prop } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'search-bar',
+  //styleUrlS! allows for multiple imports
   styleUrl: 'search-bar.scss',
   shadow: true,
 })
