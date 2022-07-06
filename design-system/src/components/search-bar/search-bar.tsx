@@ -14,11 +14,11 @@ export class SearchBar {
       <div class="search-container">
         <div class="input-container">
           {/* <search-input></search-input> */}
-          <input type="text" />
+          <input placeholder="Search the creative world at work" type="text" />
         </div>
         <div class="buttons-container">
           {this.buttons.map((button: string) => {
-            return <round-button type="normal" size="small" border="round" text={button}></round-button>;
+            return <round-button type="normal" size="small" border="none" text={button}></round-button>;
           })}
         </div>
       </div>

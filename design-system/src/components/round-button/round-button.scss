@@ -44,6 +44,13 @@ button {
   }
 
   //*Borders
+
+  &.none {
+    border: 1px solid transparent;
+    &:hover {
+      border-radius: 1rem;
+    }
+  }
   &.round {
     border-radius: 1rem;
   }

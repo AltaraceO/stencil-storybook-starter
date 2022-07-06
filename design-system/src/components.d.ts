@@ -23,7 +23,7 @@ export namespace Components {
         "links"?: string[];
     }
     interface RoundButton {
-        "border"?: 'round' | 'square';
+        "border"?: 'round' | 'square' | 'none';
         "size"?: 'small' | 'large';
         "text"?: string;
         "type"?: 'normal' | 'main';
@@ -122,7 +122,7 @@ declare namespace LocalJSX {
         "links"?: string[];
     }
     interface RoundButton {
-        "border"?: 'round' | 'square';
+        "border"?: 'round' | 'square' | 'none';
         "size"?: 'small' | 'large';
         "text"?: string;
         "type"?: 'normal' | 'main';

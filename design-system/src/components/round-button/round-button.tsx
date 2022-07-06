@@ -7,7 +7,7 @@ import { Component, h, Host, Prop } from '@stencil/core';
 export class RoundButton {
   @Prop() text?: string;
   @Prop() type?: 'normal' | 'main';
-  @Prop() border?: 'round' | 'square';
+  @Prop() border?: 'round' | 'square' | 'none';
   @Prop() size?: 'small' | 'large';
 
   render() {

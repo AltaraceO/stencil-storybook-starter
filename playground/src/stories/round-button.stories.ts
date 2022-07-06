@@ -14,7 +14,7 @@ export default {
       control: { type: 'inline-radio' },
     },
     border: {
-      options: ['round', 'square'],
+      options: ['round', 'square', 'none'],
       control: { type: 'inline-radio' },
     },
   },
