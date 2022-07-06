@@ -12,6 +12,8 @@ export namespace Components {
     interface ImageLinks {
         "image": string;
     }
+    interface MainHeader {
+    }
     interface MyComponent {
         "first"?: string;
         "last"?: string;
@@ -47,6 +49,12 @@ declare global {
     var HTMLImageLinksElement: {
         prototype: HTMLImageLinksElement;
         new (): HTMLImageLinksElement;
+    };
+    interface HTMLMainHeaderElement extends Components.MainHeader, HTMLStencilElement {
+    }
+    var HTMLMainHeaderElement: {
+        prototype: HTMLMainHeaderElement;
+        new (): HTMLMainHeaderElement;
     };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
@@ -87,6 +95,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "header-buttons": HTMLHeaderButtonsElement;
         "image-links": HTMLImageLinksElement;
+        "main-header": HTMLMainHeaderElement;
         "my-component": HTMLMyComponentElement;
         "nav-bar": HTMLNavBarElement;
         "round-button": HTMLRoundButtonElement;
@@ -101,6 +110,8 @@ declare namespace LocalJSX {
     }
     interface ImageLinks {
         "image"?: string;
+    }
+    interface MainHeader {
     }
     interface MyComponent {
         "first"?: string;
@@ -127,6 +138,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "header-buttons": HeaderButtons;
         "image-links": ImageLinks;
+        "main-header": MainHeader;
         "my-component": MyComponent;
         "nav-bar": NavBar;
         "round-button": RoundButton;
@@ -141,6 +153,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "header-buttons": LocalJSX.HeaderButtons & JSXBase.HTMLAttributes<HTMLHeaderButtonsElement>;
             "image-links": LocalJSX.ImageLinks & JSXBase.HTMLAttributes<HTMLImageLinksElement>;
+            "main-header": LocalJSX.MainHeader & JSXBase.HTMLAttributes<HTMLMainHeaderElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "nav-bar": LocalJSX.NavBar & JSXBase.HTMLAttributes<HTMLNavBarElement>;
             "round-button": LocalJSX.RoundButton & JSXBase.HTMLAttributes<HTMLRoundButtonElement>;
