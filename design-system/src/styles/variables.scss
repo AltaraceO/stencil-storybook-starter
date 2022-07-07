@@ -7,7 +7,7 @@
 // #191919 text black
 
 $font-family: 'Acumin Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-
+$basicWhite: #fff;
 $backgroundGrey: #f1f1f1;
 $activeGrey: #e8e8e8;
 $borderGrey: #cccccc;
@@ -16,3 +16,33 @@ $iconGrey: #959595;
 $blue: #437cff;
 $darkBlue: #003ecb;
 $textBlack: #191919;
+
+/* spacing for padding, margin, etc... */
+$spacing-02: 0.125rem;
+$spacing-04: 0.25rem;
+$spacing-08: 0.5rem;
+$spacing-16: 1rem;
+$spacing-24: 1.5rem;
+$spacing-32: 2rem;
+$spacing-40: 2.5rem;
+$spacing-48: 3rem;
+$spacing-56: 3.5rem;
+$spacing-64: 4rem;
+$spacing-80: 5rem;
+$spacing-96: 6rem;
+
+/* border-width */
+$border-width-01: 0.0625rem;
+$border-width-02: 0.125rem;
+$border-width-03: 0.1875rem;
+$border-width-04: 0.25rem;
+$border-width-05: 0.3125rem;
+$border-width-06: 0.375rem;
+
+/* border-radius */
+$border-radius-01: 0.0625rem;
+$border-radius-02: 0.125rem;
+$border-radius-04: 0.25rem;
+$border-radius-08: 0.5rem;
+$border-radius-16: 1rem;
+$border-radius-24: 1.5rem;

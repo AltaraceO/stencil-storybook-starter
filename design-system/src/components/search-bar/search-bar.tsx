@@ -7,7 +7,7 @@ import { Component, h, Prop } from '@stencil/core';
   shadow: true,
 })
 export class SearchBar {
-  @Prop() buttons: string[] = ['Projects', 'Images', 'Prototypes', 'Streams', 'People', 'Moodboards'];
+  @Prop() buttons: string[];
 
   render() {
     return (

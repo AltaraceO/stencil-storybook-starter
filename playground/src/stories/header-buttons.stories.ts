@@ -7,18 +7,18 @@ export default {
 } as Meta;
 
 const Template: Story<Components.HeaderButtons> = ({ buttons }) => {
-  return html`<header-buttons buttons="${buttons}"></header-buttons>`;
+  return html`<header-buttons .buttons="${buttons}"></header-buttons>`;
 };
 
 export const Default: Story<Components.HeaderButtons> = Template.bind({});
 Default.args = {
   buttons: [
     { title: 'Creative Fields', icon: 'shapes' },
-    { title: 'Tools', icon: 'trash' },
-    { title: 'Color', icon: 'trash' },
-    { title: 'Location', icon: 'trash' },
-    { title: 'School', icon: 'trash' },
-    { title: 'Source File', icon: 'trash' },
-    { title: 'Subscriptions', icon: 'trash' },
+    { title: 'Tools', icon: 'screwdriver-wrench' },
+    { title: 'Color', icon: 'droplet' },
+    { title: 'Location', icon: 'location-dot' },
+    { title: 'School', icon: 'graduation-cap' },
+    { title: 'Source File', icon: 'paperclip' },
+    { title: 'Subscriptions', icon: 'user-lock' },
   ],
 };

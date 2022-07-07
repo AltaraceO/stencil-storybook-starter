@@ -7,7 +7,7 @@ export default {
 } as Meta;
 
 const Template: Story<Components.SearchBar> = ({ buttons }) => {
-  return html`<search-bar buttons="${buttons}"></search-bar>`;
+  return html`<search-bar .buttons="${buttons}"></search-bar>`;
 };
 
 export const Default: Story<Components.SearchBar> = Template.bind({});

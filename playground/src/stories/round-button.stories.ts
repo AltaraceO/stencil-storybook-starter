@@ -21,7 +21,7 @@ export default {
 } as Meta;
 
 const Template: Story<Components.RoundButton> = ({ text, type, size, border }) => {
-  return html`<round-button type="${type}" size="${size}" border="${border}" text="${text}"></round-button>`;
+  return html`<round-button type="${type}" size="${size}" border="${border}">${text}</round-button>`;
 };
 
 export const Default: Story<Components.RoundButton> = Template.bind({});

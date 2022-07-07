@@ -1,12 +1,12 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, ComponentInterface, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'nav-bar',
   styleUrl: 'nav-bar.scss',
 })
-export class NavBar {
-  @Prop() links?: string[] = ['Discover', 'Livestream', 'Jobs'];
-  @Prop() buttons?: string[] = ['Log In', 'Sign Up'];
+export class NavBar implements ComponentInterface {
+  @Prop() links?: string[];
+  @Prop() buttons?: string[];
 
   render() {
     return (
@@ -17,7 +17,7 @@ export class NavBar {
           })}
         </div>
         <div class="spaces-between">
-          {this.buttons.map((button: string) => {
+          {this.buttons?.map((button: string) => {
             if (button === 'Sign Up') {
               return (
                 <round-button type="main" size="small" border="round">

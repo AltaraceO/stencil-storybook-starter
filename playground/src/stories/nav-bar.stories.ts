@@ -7,11 +7,11 @@ export default {
 } as Meta;
 
 const Template: Story<Components.NavBar> = ({ links, buttons }) => {
-  return html`<nav-bar links="${links}" buttons="${buttons}"></nav-bar>`;
+  return html`<nav-bar .links=${links} .buttons="${buttons}"></nav-bar>`;
 };
 
 export const Default: Story<Components.NavBar> = Template.bind({});
 Default.args = {
   links: ['Discover', 'Livestream', 'Jobs'],
-  buttons: ['Log In', 'Sign Up'],
+  buttons: ['Test', 'Log In', 'Sign Up'],
 };

@@ -1,22 +1,21 @@
-import { Component, h, Host, Prop } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'round-button',
   styleUrl: 'round-button.scss',
+  shadow: true,
 })
 export class RoundButton {
   @Prop() text?: string;
-  @Prop() type?: 'normal' | 'main';
-  @Prop() border?: 'round' | 'square' | 'none';
-  @Prop() size?: 'small' | 'large';
+  @Prop({ reflect: true }) type?: 'normal' | 'main';
+  @Prop({ reflect: true }) size?: 'small' | 'large';
+  @Prop({ reflect: true }) border?: 'round' | 'square' | 'none';
 
   render() {
     return (
-      <Host>
-        <button class={`${this.size} ${this.border} ${this.type}`}>
-          <slot />
-        </button>
-      </Host>
+      <button class={`${this.size} ${this.type}`}>
+        <slot />
+      </button>
     );
   }
 }
