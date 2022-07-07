@@ -7,7 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface HeaderButtons {
-        "buttons": string[];
+        "buttons": { title: string; icon: string }[];
     }
     interface ImageLinks {
         "image": string;
@@ -106,7 +106,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface HeaderButtons {
-        "buttons"?: string[];
+        "buttons"?: { title: string; icon: string }[];
     }
     interface ImageLinks {
         "image"?: string;

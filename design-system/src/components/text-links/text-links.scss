@@ -1,6 +1,8 @@
 @import '../../styles/variables';
 
 .link {
+  display: flex;
+  align-items: center;
   width: auto;
   height: 100%;
   padding: 0;

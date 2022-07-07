@@ -13,7 +13,9 @@ export class RoundButton {
   render() {
     return (
       <Host>
-        <button class={`${this.size} ${this.border} ${this.type}`}> {this.text} </button>
+        <button class={`${this.size} ${this.border} ${this.type}`}>
+          <slot />
+        </button>
       </Host>
     );
   }

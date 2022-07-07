@@ -12,5 +12,13 @@ const Template: Story<Components.HeaderButtons> = ({ buttons }) => {
 
 export const Default: Story<Components.HeaderButtons> = Template.bind({});
 Default.args = {
-  buttons: ['Creative Fields', 'Tools', 'Color', 'Location', 'School', 'Source File', 'Subscriptions'],
+  buttons: [
+    { title: 'Creative Fields', icon: 'shapes' },
+    { title: 'Tools', icon: 'trash' },
+    { title: 'Color', icon: 'trash' },
+    { title: 'Location', icon: 'trash' },
+    { title: 'School', icon: 'trash' },
+    { title: 'Source File', icon: 'trash' },
+    { title: 'Subscriptions', icon: 'trash' },
+  ],
 };

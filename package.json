@@ -9,6 +9,10 @@
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@stencil/helmet": "^0.3.3",
     "husky": "7.0.4"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1"
   }
 }

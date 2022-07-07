@@ -13,12 +13,15 @@ export class SearchBar {
     return (
       <div class="search-container">
         <div class="input-container">
-          {/* <search-input></search-input> */}
           <input placeholder="Search the creative world at work" type="text" />
         </div>
         <div class="buttons-container">
           {this.buttons.map((button: string) => {
-            return <round-button type="normal" size="small" border="none" text={button}></round-button>;
+            return (
+              <round-button type="normal" size="small" border="none">
+                {button}
+              </round-button>
+            );
           })}
         </div>
       </div>

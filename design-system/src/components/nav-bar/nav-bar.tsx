@@ -19,9 +19,17 @@ export class NavBar {
         <div class="spaces-between">
           {this.buttons.map((button: string) => {
             if (button === 'Sign Up') {
-              return <round-button type="main" size="small" border="round" text={button}></round-button>;
+              return (
+                <round-button type="main" size="small" border="round">
+                  {button}
+                </round-button>
+              );
             }
-            return <round-button type="normal" size="small" border="round" text={button}></round-button>;
+            return (
+              <round-button type="normal" size="small" border="round">
+                {button}
+              </round-button>
+            );
           })}
         </div>
       </div>
