@@ -6,6 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface FaIcons {
+        "icon": string;
+    }
     interface HeaderButtons {
         "buttons": { title: string; icon: string }[];
     }
@@ -42,6 +45,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLFaIconsElement extends Components.FaIcons, HTMLStencilElement {
+    }
+    var HTMLFaIconsElement: {
+        prototype: HTMLFaIconsElement;
+        new (): HTMLFaIconsElement;
+    };
     interface HTMLHeaderButtonsElement extends Components.HeaderButtons, HTMLStencilElement {
     }
     var HTMLHeaderButtonsElement: {
@@ -97,6 +106,7 @@ declare global {
         new (): HTMLTextLinksElement;
     };
     interface HTMLElementTagNameMap {
+        "fa-icons": HTMLFaIconsElement;
         "header-buttons": HTMLHeaderButtonsElement;
         "image-links": HTMLImageLinksElement;
         "main-header": HTMLMainHeaderElement;
@@ -109,6 +119,9 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface FaIcons {
+        "icon"?: string;
+    }
     interface HeaderButtons {
         "buttons"?: { title: string; icon: string }[];
     }
@@ -144,6 +157,7 @@ declare namespace LocalJSX {
         "text"?: string;
     }
     interface IntrinsicElements {
+        "fa-icons": FaIcons;
         "header-buttons": HeaderButtons;
         "image-links": ImageLinks;
         "main-header": MainHeader;
@@ -159,6 +173,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "fa-icons": LocalJSX.FaIcons & JSXBase.HTMLAttributes<HTMLFaIconsElement>;
             "header-buttons": LocalJSX.HeaderButtons & JSXBase.HTMLAttributes<HTMLHeaderButtonsElement>;
             "image-links": LocalJSX.ImageLinks & JSXBase.HTMLAttributes<HTMLImageLinksElement>;
             "main-header": LocalJSX.MainHeader & JSXBase.HTMLAttributes<HTMLMainHeaderElement>;
