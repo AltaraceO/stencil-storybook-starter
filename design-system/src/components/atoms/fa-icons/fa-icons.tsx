@@ -8,6 +8,7 @@ import Helmet from '@stencil/helmet';
 })
 export class FaIcons {
   @Prop() icon: string;
+
   renderIcon(icon: string) {
     return [
       <Helmet>
@@ -17,6 +18,6 @@ export class FaIcons {
     ];
   }
   render() {
-    return <Host>{this.renderIcon(this.icon)}</Host>;
+    return <Host> {this.renderIcon(this.icon)}</Host>;
   }
 }

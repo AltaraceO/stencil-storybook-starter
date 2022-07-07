@@ -15,7 +15,7 @@ export class HeaderButtons {
         {this.buttons.map((button) => {
           return (
             <round-button type="normal" size="large" border="square">
-              {button.title}
+              <fa-icons icon={button.icon}></fa-icons> {button.title}
             </round-button>
           );
         })}

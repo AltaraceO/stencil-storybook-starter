@@ -7,10 +7,10 @@ export default {
 } as Meta;
 
 const Template: Story<Components.FaIcons> = ({ icon }) => {
-  return html`<fa-icons icon="${icon}"></fa-icons>`;
+  return html`<fa-icons icon=${icon}></fa-icons>`;
 };
 
 export const Default: Story<Components.FaIcons> = Template.bind({});
 Default.args = {
-  icon: 'trash',
+  icon: 'shapes',
 };
