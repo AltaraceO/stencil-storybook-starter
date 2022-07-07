@@ -3,6 +3,7 @@ import { Component, ComponentInterface, h, Prop } from '@stencil/core';
 @Component({
   tag: 'nav-bar',
   styleUrl: 'nav-bar.scss',
+  shadow: true,
 })
 export class NavBar implements ComponentInterface {
   @Prop() links?: string[];

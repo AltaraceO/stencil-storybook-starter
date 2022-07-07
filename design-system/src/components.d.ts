@@ -13,6 +13,10 @@ export namespace Components {
         "image": string;
     }
     interface MainHeader {
+        "headerButtons"?: { title: string; icon: string }[];
+        "navButtons"?: string[];
+        "navLinks"?: string[];
+        "searchButtons"?: string[];
     }
     interface MyComponent {
         "first"?: string;
@@ -112,6 +116,10 @@ declare namespace LocalJSX {
         "image"?: string;
     }
     interface MainHeader {
+        "headerButtons"?: { title: string; icon: string }[];
+        "navButtons"?: string[];
+        "navLinks"?: string[];
+        "searchButtons"?: string[];
     }
     interface MyComponent {
         "first"?: string;
