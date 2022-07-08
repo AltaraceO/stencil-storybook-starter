@@ -1,4 +1,4 @@
-import { Component, getAssetPath, h, Host, Prop } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'image-links',
@@ -7,13 +7,9 @@ import { Component, getAssetPath, h, Host, Prop } from '@stencil/core';
 })
 export class ImageLinks {
   @Prop() image: string;
+  @Prop() alt: string;
 
   render() {
-    const imageSrc = getAssetPath(`./assets/${this.image}`);
-    return (
-      <Host>
-        return <img src={imageSrc} />
-      </Host>
-    );
+    return <img src={this.image} alt={this.alt} />;
   }
 }

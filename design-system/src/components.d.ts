@@ -6,6 +6,8 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface CardTitles {
+    }
     interface FaIcons {
         "icon": string;
     }
@@ -13,6 +15,7 @@ export namespace Components {
         "buttons": { title: string; icon: string }[];
     }
     interface ImageLinks {
+        "alt": string;
         "image": string;
     }
     interface MainHeader {
@@ -45,6 +48,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLCardTitlesElement extends Components.CardTitles, HTMLStencilElement {
+    }
+    var HTMLCardTitlesElement: {
+        prototype: HTMLCardTitlesElement;
+        new (): HTMLCardTitlesElement;
+    };
     interface HTMLFaIconsElement extends Components.FaIcons, HTMLStencilElement {
     }
     var HTMLFaIconsElement: {
@@ -106,6 +115,7 @@ declare global {
         new (): HTMLTextLinksElement;
     };
     interface HTMLElementTagNameMap {
+        "card-titles": HTMLCardTitlesElement;
         "fa-icons": HTMLFaIconsElement;
         "header-buttons": HTMLHeaderButtonsElement;
         "image-links": HTMLImageLinksElement;
@@ -119,6 +129,8 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface CardTitles {
+    }
     interface FaIcons {
         "icon"?: string;
     }
@@ -126,6 +138,7 @@ declare namespace LocalJSX {
         "buttons"?: { title: string; icon: string }[];
     }
     interface ImageLinks {
+        "alt"?: string;
         "image"?: string;
     }
     interface MainHeader {
@@ -157,6 +170,7 @@ declare namespace LocalJSX {
         "text"?: string;
     }
     interface IntrinsicElements {
+        "card-titles": CardTitles;
         "fa-icons": FaIcons;
         "header-buttons": HeaderButtons;
         "image-links": ImageLinks;
@@ -173,6 +187,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "card-titles": LocalJSX.CardTitles & JSXBase.HTMLAttributes<HTMLCardTitlesElement>;
             "fa-icons": LocalJSX.FaIcons & JSXBase.HTMLAttributes<HTMLFaIconsElement>;
             "header-buttons": LocalJSX.HeaderButtons & JSXBase.HTMLAttributes<HTMLHeaderButtonsElement>;
             "image-links": LocalJSX.ImageLinks & JSXBase.HTMLAttributes<HTMLImageLinksElement>;
