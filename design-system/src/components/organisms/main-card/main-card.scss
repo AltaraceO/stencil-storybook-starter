@@ -1,0 +1,14 @@
+@import '../../shared/styles/variables';
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 400px;
+}
+
+.info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  max-height: $spacing-64;
+}

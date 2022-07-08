@@ -6,8 +6,8 @@ import { Component, h, Host, Prop } from '@stencil/core';
   shadow: true,
 })
 export class CardIcons {
-  @Prop() like: { icon: string; amount: string };
-  @Prop() seen: { icon: string; amount: string };
+  @Prop() like?: { icon: string; amount: string };
+  @Prop() seen?: { icon: string; amount: string };
   render() {
     return (
       <Host>

@@ -6,8 +6,8 @@ import { Component, h, Host, Prop } from '@stencil/core';
   shadow: true,
 })
 export class CardTitles {
-  @Prop() head: string;
-  @Prop() author: string;
+  @Prop() head?: string;
+  @Prop() author?: string;
 
   render() {
     return (

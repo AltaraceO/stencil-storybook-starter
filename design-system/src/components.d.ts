@@ -7,12 +7,12 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface CardIcons {
-        "like": { icon: string; amount: string };
-        "seen": { icon: string; amount: string };
+        "like"?: { icon: string; amount: string };
+        "seen"?: { icon: string; amount: string };
     }
     interface CardTitles {
-        "author": string;
-        "head": string;
+        "author"?: string;
+        "head"?: string;
     }
     interface FaIcons {
         "icon": string;
@@ -25,6 +25,8 @@ export namespace Components {
         "image": string;
     }
     interface MainCard {
+        "cardicon"?: { like: { icon: string; amount: string }; seen: { icon: string; amount: string } };
+        "cardinfo"?: { head: string; author: string };
         "image": { source: string; alt: string };
     }
     interface MainHeader {
@@ -173,6 +175,8 @@ declare namespace LocalJSX {
         "image"?: string;
     }
     interface MainCard {
+        "cardicon"?: { like: { icon: string; amount: string }; seen: { icon: string; amount: string } };
+        "cardinfo"?: { head: string; author: string };
         "image"?: { source: string; alt: string };
     }
     interface MainHeader {
