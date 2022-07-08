@@ -7,6 +7,8 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface CardTitles {
+        "author": { text: string; size: 'small' | 'medium' | 'large'; weight: '400' | '700' };
+        "head": { text: string; size: 'small' | 'medium' | 'large'; weight: '400' | '700' };
     }
     interface FaIcons {
         "icon": string;
@@ -44,7 +46,9 @@ export namespace Components {
     interface SearchInput {
     }
     interface TextLinks {
+        "size"?: 'small' | 'medium' | 'large';
         "text": string;
+        "weight"?: '400' | '700';
     }
 }
 declare global {
@@ -130,6 +134,8 @@ declare global {
 }
 declare namespace LocalJSX {
     interface CardTitles {
+        "author"?: { text: string; size: 'small' | 'medium' | 'large'; weight: '400' | '700' };
+        "head"?: { text: string; size: 'small' | 'medium' | 'large'; weight: '400' | '700' };
     }
     interface FaIcons {
         "icon"?: string;
@@ -167,7 +173,9 @@ declare namespace LocalJSX {
     interface SearchInput {
     }
     interface TextLinks {
+        "size"?: 'small' | 'medium' | 'large';
         "text"?: string;
+        "weight"?: '400' | '700';
     }
     interface IntrinsicElements {
         "card-titles": CardTitles;

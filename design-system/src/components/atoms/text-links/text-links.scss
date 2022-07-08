@@ -1,17 +1,32 @@
 @import '../../shared/styles/variables';
+
+:host([size='small']) div {
+  font-size: $font-size-10;
+}
+:host([size='medium']) div {
+  font-size: $font-size-12;
+}
+:host([size='large']) div {
+  font-size: $font-size-16;
+}
+:host([weight='400']) div {
+  font-weight: $font-weight-400;
+}
+:host([weight='700']) div {
+  font-weight: $font-weight-700;
+}
+
 .link {
   display: flex;
   align-items: center;
   width: auto;
   height: 100%;
   padding: 0;
-  font-weight: 500;
-  font-size: 16px;
   font-family: $font-family;
-  border-bottom: 2px solid transparent;
+  border-bottom: $border-width-02 solid transparent;
   cursor: pointer;
 
   &:hover {
-    border-bottom: 2px solid $textBlack;
+    border-bottom: $border-width-02 solid $textBlack;
   }
 }

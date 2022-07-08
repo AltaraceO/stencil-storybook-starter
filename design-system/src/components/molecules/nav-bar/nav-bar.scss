@@ -9,13 +9,13 @@ text-links {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 4rem;
-  border-bottom: 1px solid $backgroundGrey;
+  height: $spacing-64;
+  border-bottom: $border-width-01 solid $backgroundGrey;
 }
 
 .spaces-between {
   display: flex;
-  gap: 15px;
+  gap: $spacing-16;
   align-items: center;
   height: 100%;
 }

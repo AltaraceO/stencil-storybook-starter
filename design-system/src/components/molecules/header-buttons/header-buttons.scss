@@ -5,8 +5,8 @@
 }
 .spaces-between {
   display: flex;
-  gap: 15px;
+  gap: $spacing-16;
   align-items: center;
   height: 100%;
-  margin: 1rem;
+  margin: $spacing-16;
 }

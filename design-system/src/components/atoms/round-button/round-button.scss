@@ -2,10 +2,10 @@
 
 button {
   color: $textBlack;
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: $font-weight-400;
+  font-size: $font-size-16;
   font-family: $font-family;
-  line-height: 20px;
+  line-height: $spacing-24;
   background: transparent;
   cursor: pointer;
   transition: all ease-in-out 0.1s;

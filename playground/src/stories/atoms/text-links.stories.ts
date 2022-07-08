@@ -6,11 +6,13 @@ export default {
   title: 'Text Links',
 } as Meta;
 
-const Template: Story<Components.TextLinks> = ({ text }) => {
-  return html`<text-links text="${text}" "></text-links>`;
+const Template: Story<Components.TextLinks> = ({ weight, text, size }) => {
+  return html`<text-links weight=${weight} text="${text}" size=${size}></text-links>`;
 };
 
 export const Default: Story<Components.TextLinks> = Template.bind({});
 Default.args = {
   text: 'hello',
+  size: 'large',
+  weight: '700',
 };

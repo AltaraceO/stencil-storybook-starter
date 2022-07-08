@@ -14,7 +14,7 @@ export class HeaderButtons {
       <div class="spaces-between">
         {this.buttons.map((button) => {
           return (
-            <round-button type="normal" size="large" border="square">
+            <round-button type="normal" size="small" border="square">
               <fa-icons icon={button.icon}></fa-icons> {button.title}
             </round-button>
           );

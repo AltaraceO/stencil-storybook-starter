@@ -1,0 +1,9 @@
+@import '../../shared/styles/variables';
+
+:host {
+  display: block;
+}
+
+.header {
+  font-size: $font-size-28;
+}
