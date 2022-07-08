@@ -11,8 +11,8 @@ export namespace Components {
         "seen": { icon: string; amount: string };
     }
     interface CardTitles {
-        "author": { text: string; size: 'small' | 'medium' | 'large'; weight: '400' | '700' };
-        "head": { text: string; size: 'small' | 'medium' | 'large'; weight: '400' | '700' };
+        "author": string;
+        "head": string;
     }
     interface FaIcons {
         "icon": string;
@@ -23,6 +23,9 @@ export namespace Components {
     interface ImageLinks {
         "alt": string;
         "image": string;
+    }
+    interface MainCard {
+        "image": { source: string; alt: string };
     }
     interface MainHeader {
         "headerButtons"?: { title: string; icon: string }[];
@@ -86,6 +89,12 @@ declare global {
         prototype: HTMLImageLinksElement;
         new (): HTMLImageLinksElement;
     };
+    interface HTMLMainCardElement extends Components.MainCard, HTMLStencilElement {
+    }
+    var HTMLMainCardElement: {
+        prototype: HTMLMainCardElement;
+        new (): HTMLMainCardElement;
+    };
     interface HTMLMainHeaderElement extends Components.MainHeader, HTMLStencilElement {
     }
     var HTMLMainHeaderElement: {
@@ -134,6 +143,7 @@ declare global {
         "fa-icons": HTMLFaIconsElement;
         "header-buttons": HTMLHeaderButtonsElement;
         "image-links": HTMLImageLinksElement;
+        "main-card": HTMLMainCardElement;
         "main-header": HTMLMainHeaderElement;
         "my-component": HTMLMyComponentElement;
         "nav-bar": HTMLNavBarElement;
@@ -149,8 +159,8 @@ declare namespace LocalJSX {
         "seen"?: { icon: string; amount: string };
     }
     interface CardTitles {
-        "author"?: { text: string; size: 'small' | 'medium' | 'large'; weight: '400' | '700' };
-        "head"?: { text: string; size: 'small' | 'medium' | 'large'; weight: '400' | '700' };
+        "author"?: string;
+        "head"?: string;
     }
     interface FaIcons {
         "icon"?: string;
@@ -161,6 +171,9 @@ declare namespace LocalJSX {
     interface ImageLinks {
         "alt"?: string;
         "image"?: string;
+    }
+    interface MainCard {
+        "image"?: { source: string; alt: string };
     }
     interface MainHeader {
         "headerButtons"?: { title: string; icon: string }[];
@@ -198,6 +211,7 @@ declare namespace LocalJSX {
         "fa-icons": FaIcons;
         "header-buttons": HeaderButtons;
         "image-links": ImageLinks;
+        "main-card": MainCard;
         "main-header": MainHeader;
         "my-component": MyComponent;
         "nav-bar": NavBar;
@@ -216,6 +230,7 @@ declare module "@stencil/core" {
             "fa-icons": LocalJSX.FaIcons & JSXBase.HTMLAttributes<HTMLFaIconsElement>;
             "header-buttons": LocalJSX.HeaderButtons & JSXBase.HTMLAttributes<HTMLHeaderButtonsElement>;
             "image-links": LocalJSX.ImageLinks & JSXBase.HTMLAttributes<HTMLImageLinksElement>;
+            "main-card": LocalJSX.MainCard & JSXBase.HTMLAttributes<HTMLMainCardElement>;
             "main-header": LocalJSX.MainHeader & JSXBase.HTMLAttributes<HTMLMainHeaderElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "nav-bar": LocalJSX.NavBar & JSXBase.HTMLAttributes<HTMLNavBarElement>;

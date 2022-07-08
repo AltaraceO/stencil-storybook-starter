@@ -11,6 +11,10 @@ export class TextLinks {
   @Prop({ reflect: true }) weight?: '400' | '700' = '400';
 
   render() {
-    return <div class="link">{this.text}</div>;
+    return (
+      <div class="link">
+        <slot />
+      </div>
+    );
   }
 }

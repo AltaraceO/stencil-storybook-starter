@@ -14,7 +14,11 @@ export class NavBar implements ComponentInterface {
       <div class="container">
         <div class="spaces-between">
           {this.links?.map((link: string) => {
-            return <text-links size="large" weight="400" text={link}></text-links>;
+            return (
+              <text-links size="large" weight="400">
+                {link}
+              </text-links>
+            );
           })}
         </div>
         <div class="spaces-between">
