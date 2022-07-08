@@ -35,12 +35,21 @@ export namespace Components {
         "navLinks"?: string[];
         "searchButtons"?: string[];
     }
+    interface MainPage {
+        "cards": {
+    image: { source: string; alt: string };
+    cardinfo: { head: string; author: string };
+    cardicon: { like: { icon: string; amount: string }; seen: { icon: string; amount: string } };
+  }[];
+        "header": { navLinks: string[]; navButtons: string[]; searchButtons: string[]; headerButtons: { title: string; icon: string }[] };
+    }
     interface MyComponent {
         "first"?: string;
         "last"?: string;
     }
     interface NavBar {
         "buttons"?: string[];
+        "image"?: { image: string; alt: string };
         "links"?: string[];
     }
     interface RoundButton {
@@ -103,6 +112,12 @@ declare global {
         prototype: HTMLMainHeaderElement;
         new (): HTMLMainHeaderElement;
     };
+    interface HTMLMainPageElement extends Components.MainPage, HTMLStencilElement {
+    }
+    var HTMLMainPageElement: {
+        prototype: HTMLMainPageElement;
+        new (): HTMLMainPageElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -147,6 +162,7 @@ declare global {
         "image-links": HTMLImageLinksElement;
         "main-card": HTMLMainCardElement;
         "main-header": HTMLMainHeaderElement;
+        "main-page": HTMLMainPageElement;
         "my-component": HTMLMyComponentElement;
         "nav-bar": HTMLNavBarElement;
         "round-button": HTMLRoundButtonElement;
@@ -185,12 +201,21 @@ declare namespace LocalJSX {
         "navLinks"?: string[];
         "searchButtons"?: string[];
     }
+    interface MainPage {
+        "cards"?: {
+    image: { source: string; alt: string };
+    cardinfo: { head: string; author: string };
+    cardicon: { like: { icon: string; amount: string }; seen: { icon: string; amount: string } };
+  }[];
+        "header"?: { navLinks: string[]; navButtons: string[]; searchButtons: string[]; headerButtons: { title: string; icon: string }[] };
+    }
     interface MyComponent {
         "first"?: string;
         "last"?: string;
     }
     interface NavBar {
         "buttons"?: string[];
+        "image"?: { image: string; alt: string };
         "links"?: string[];
     }
     interface RoundButton {
@@ -217,6 +242,7 @@ declare namespace LocalJSX {
         "image-links": ImageLinks;
         "main-card": MainCard;
         "main-header": MainHeader;
+        "main-page": MainPage;
         "my-component": MyComponent;
         "nav-bar": NavBar;
         "round-button": RoundButton;
@@ -236,6 +262,7 @@ declare module "@stencil/core" {
             "image-links": LocalJSX.ImageLinks & JSXBase.HTMLAttributes<HTMLImageLinksElement>;
             "main-card": LocalJSX.MainCard & JSXBase.HTMLAttributes<HTMLMainCardElement>;
             "main-header": LocalJSX.MainHeader & JSXBase.HTMLAttributes<HTMLMainHeaderElement>;
+            "main-page": LocalJSX.MainPage & JSXBase.HTMLAttributes<HTMLMainPageElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "nav-bar": LocalJSX.NavBar & JSXBase.HTMLAttributes<HTMLNavBarElement>;
             "round-button": LocalJSX.RoundButton & JSXBase.HTMLAttributes<HTMLRoundButtonElement>;

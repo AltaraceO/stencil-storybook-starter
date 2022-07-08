@@ -3,7 +3,7 @@ import { Components } from '@yoobic/design-system';
 import { html } from 'lit-html';
 
 export default {
-  title: 'Fa Icons',
+  title: 'Atoms/Fa Icons',
 } as Meta;
 
 const Template: Story<Components.FaIcons> = ({ icon }) => {

@@ -3,7 +3,7 @@ import { Components } from '@yoobic/design-system';
 import { html } from 'lit-html';
 
 export default {
-  title: 'Search Bar',
+  title: 'Molecules/Search Bar',
 } as Meta;
 
 const Template: Story<Components.SearchBar> = ({ buttons }) => {

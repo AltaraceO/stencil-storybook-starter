@@ -5,7 +5,7 @@ import { html } from 'lit-html';
 import * as bag from '../../assets/card-imgs/giant.jpg';
 
 export default {
-  title: 'Main Card',
+  title: 'Organism/Main Card',
 } as Meta;
 
 const Template: Story<Components.MainCard> = ({ image, cardicon, cardinfo }) => {
@@ -16,5 +16,5 @@ export const Default: Story<Components.MainCard> = Template.bind({});
 Default.args = {
   image: { source: bag, alt: 'testAlt' },
   cardinfo: { head: 'this is a title', author: 'this is an author' },
-  cardicon: { like: { icon: 'trash', amount: '999' }, seen: { icon: 'trash', amount: '888' } },
+  cardicon: { like: { icon: 'thumbs-up', amount: '999' }, seen: { icon: 'eye', amount: '888' } },
 };

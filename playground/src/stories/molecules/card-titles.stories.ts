@@ -3,7 +3,7 @@ import { Components } from '@yoobic/design-system';
 import { html } from 'lit-html';
 
 export default {
-  title: 'Card Titles',
+  title: 'Molecules/Card Titles',
 } as Meta;
 
 const Template: Story<Components.CardTitles> = ({ head, author }) => {

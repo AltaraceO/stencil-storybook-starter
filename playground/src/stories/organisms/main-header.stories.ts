@@ -3,7 +3,7 @@ import { Components } from '@yoobic/design-system';
 import { html } from 'lit-html';
 
 export default {
-  title: 'Main Header',
+  title: 'Organism/Main Header',
 } as Meta;
 
 const Template: Story<Components.MainHeader> = ({ navLinks, navButtons, searchButtons, headerButtons }) => {

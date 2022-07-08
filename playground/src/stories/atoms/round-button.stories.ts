@@ -3,7 +3,7 @@ import { Components } from '@yoobic/design-system';
 import { html } from 'lit-html';
 
 export default {
-  title: 'Round Button',
+  title: 'Atoms/Round Button',
   argTypes: {
     type: {
       options: ['normal', 'main'],

@@ -3,7 +3,7 @@ import { Components } from '@yoobic/design-system';
 import { html } from 'lit-html';
 
 export default {
-  title: 'Nav Bar',
+  title: 'Molecules/Nav Bar',
 } as Meta;
 
 const Template: Story<Components.NavBar> = ({ links, buttons }) => {

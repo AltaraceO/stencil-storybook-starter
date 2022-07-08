@@ -5,7 +5,7 @@ import { html } from 'lit-html';
 import * as bag from '../../assets/card-imgs/giant.jpg';
 
 export default {
-  title: 'Image Links',
+  title: 'Atoms/Image Links',
 } as Meta;
 
 const Template: Story<Components.ImageLinks> = ({ image, alt }) => {

@@ -8,11 +8,13 @@ import { Component, ComponentInterface, h, Prop } from '@stencil/core';
 export class NavBar implements ComponentInterface {
   @Prop() links?: string[];
   @Prop() buttons?: string[];
+  @Prop() image?: { image: string; alt: string };
 
   render() {
     return (
       <div class="container">
         <div class="spaces-between">
+          <image-link></image-link>
           {this.links?.map((link: string) => {
             return (
               <text-links size="large" weight="400">

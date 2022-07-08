@@ -3,7 +3,7 @@ import { Components } from '@yoobic/design-system';
 import { html } from 'lit-html';
 
 export default {
-  title: 'Text Links',
+  title: 'Atoms/Text Links',
 } as Meta;
 
 const Template: Story<Components.TextLinks> = ({ weight, text, size }) => {
