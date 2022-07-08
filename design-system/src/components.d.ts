@@ -6,6 +6,10 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface CardIcons {
+        "like": { icon: string; amount: string };
+        "seen": { icon: string; amount: string };
+    }
     interface CardTitles {
         "author": { text: string; size: 'small' | 'medium' | 'large'; weight: '400' | '700' };
         "head": { text: string; size: 'small' | 'medium' | 'large'; weight: '400' | '700' };
@@ -52,6 +56,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLCardIconsElement extends Components.CardIcons, HTMLStencilElement {
+    }
+    var HTMLCardIconsElement: {
+        prototype: HTMLCardIconsElement;
+        new (): HTMLCardIconsElement;
+    };
     interface HTMLCardTitlesElement extends Components.CardTitles, HTMLStencilElement {
     }
     var HTMLCardTitlesElement: {
@@ -119,6 +129,7 @@ declare global {
         new (): HTMLTextLinksElement;
     };
     interface HTMLElementTagNameMap {
+        "card-icons": HTMLCardIconsElement;
         "card-titles": HTMLCardTitlesElement;
         "fa-icons": HTMLFaIconsElement;
         "header-buttons": HTMLHeaderButtonsElement;
@@ -133,6 +144,10 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface CardIcons {
+        "like"?: { icon: string; amount: string };
+        "seen"?: { icon: string; amount: string };
+    }
     interface CardTitles {
         "author"?: { text: string; size: 'small' | 'medium' | 'large'; weight: '400' | '700' };
         "head"?: { text: string; size: 'small' | 'medium' | 'large'; weight: '400' | '700' };
@@ -178,6 +193,7 @@ declare namespace LocalJSX {
         "weight"?: '400' | '700';
     }
     interface IntrinsicElements {
+        "card-icons": CardIcons;
         "card-titles": CardTitles;
         "fa-icons": FaIcons;
         "header-buttons": HeaderButtons;
@@ -195,6 +211,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "card-icons": LocalJSX.CardIcons & JSXBase.HTMLAttributes<HTMLCardIconsElement>;
             "card-titles": LocalJSX.CardTitles & JSXBase.HTMLAttributes<HTMLCardTitlesElement>;
             "fa-icons": LocalJSX.FaIcons & JSXBase.HTMLAttributes<HTMLFaIconsElement>;
             "header-buttons": LocalJSX.HeaderButtons & JSXBase.HTMLAttributes<HTMLHeaderButtonsElement>;

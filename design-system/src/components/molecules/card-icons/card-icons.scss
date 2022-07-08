@@ -1,0 +1,17 @@
+@import '../../shared/styles/variables';
+
+:host {
+  display: flex;
+  gap: $spacing-08;
+}
+
+.container {
+  display: flex;
+  font-weight: $font-weight-700;
+  font-size: $font-size-12;
+  font-family: $font-family;
+}
+
+.container fa-icons {
+  color: $iconGrey;
+}
