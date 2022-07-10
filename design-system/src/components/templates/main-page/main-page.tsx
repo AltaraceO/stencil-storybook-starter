@@ -1,4 +1,6 @@
-import { Component, h, Host, Prop } from '@stencil/core';
+import { Component, h, Host, Listen, Prop, State } from '@stencil/core';
+
+import { Card, Header } from './main-page.type';
 
 @Component({
   tag: 'main-page',
@@ -6,12 +8,19 @@ import { Component, h, Host, Prop } from '@stencil/core';
   shadow: true,
 })
 export class MainPage {
-  @Prop() header: { navLinks: string[]; navButtons: string[]; searchButtons: string[]; headerButtons: { title: string; icon: string }[] };
-  @Prop() cards: {
-    image: { source: string; alt: string };
-    cardinfo: { head: string; author: string };
-    cardicon: { like: { icon: string; amount: string }; seen: { icon: string; amount: string } };
-  }[];
+  @Prop() header: Header;
+  @Prop() cards: Card[];
+  @State() cardInfo: Card[];
+
+  @Listen('newvalue', { target: 'body' })
+  searchText(e: CustomEvent<string>) {
+    this.cardInfo = this.cards.filter((el) => el.cardinfo.author.toLowerCase().includes(e.detail));
+  }
+
+  componentWillLoad() {
+    this.cardInfo = this.cards;
+  }
+
   render() {
     return (
       <Host>
@@ -23,7 +32,7 @@ export class MainPage {
         ></main-header>
         {/* use grid */}
         <div class="container">
-          {this.cards.map((card) => {
+          {this.cardInfo.map((card) => {
             return <main-card class="card" image={card.image} cardinfo={card.cardinfo} cardicon={card.cardicon}></main-card>;
           })}
         </div>

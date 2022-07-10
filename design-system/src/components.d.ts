@@ -5,6 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { Card, Header } from "./components/templates/main-page/main-page.type";
 export namespace Components {
     interface CardIcons {
         "like"?: { icon: string; amount: string };
@@ -36,12 +37,8 @@ export namespace Components {
         "searchButtons"?: string[];
     }
     interface MainPage {
-        "cards": {
-    image: { source: string; alt: string };
-    cardinfo: { head: string; author: string };
-    cardicon: { like: { icon: string; amount: string }; seen: { icon: string; amount: string } };
-  }[];
-        "header": { navLinks: string[]; navButtons: string[]; searchButtons: string[]; headerButtons: { title: string; icon: string }[] };
+        "cards": Card[];
+        "header": Header;
     }
     interface MyComponent {
         "first"?: string;
@@ -60,6 +57,7 @@ export namespace Components {
     }
     interface SearchBar {
         "buttons": string[];
+        "value": string;
     }
     interface SearchInput {
     }
@@ -202,12 +200,8 @@ declare namespace LocalJSX {
         "searchButtons"?: string[];
     }
     interface MainPage {
-        "cards"?: {
-    image: { source: string; alt: string };
-    cardinfo: { head: string; author: string };
-    cardicon: { like: { icon: string; amount: string }; seen: { icon: string; amount: string } };
-  }[];
-        "header"?: { navLinks: string[]; navButtons: string[]; searchButtons: string[]; headerButtons: { title: string; icon: string }[] };
+        "cards"?: Card[];
+        "header"?: Header;
     }
     interface MyComponent {
         "first"?: string;
@@ -226,6 +220,8 @@ declare namespace LocalJSX {
     }
     interface SearchBar {
         "buttons"?: string[];
+        "onNewvalue"?: (event: CustomEvent<any>) => void;
+        "value"?: string;
     }
     interface SearchInput {
     }
