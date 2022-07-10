@@ -10,6 +10,10 @@ export class ImageLinks {
   @Prop() alt: string;
 
   render() {
-    return <img src={this.image} alt={this.alt} />;
+    return (
+      <div class="image">
+        <img src={this.image} alt={this.alt} />
+      </div>
+    );
   }
 }
