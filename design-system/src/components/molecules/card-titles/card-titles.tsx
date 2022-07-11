@@ -15,6 +15,7 @@ export class CardTitles {
         <text-links weight="700" size="large">
           {this.head}
         </text-links>
+
         <text-links weight="400" size="medium">
           {this.author}
         </text-links>
