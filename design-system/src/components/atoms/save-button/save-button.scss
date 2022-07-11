@@ -1,0 +1,15 @@
+@import '../../shared/styles/variables';
+
+:host {
+  display: block;
+}
+
+button {
+  display: flex;
+  gap: $spacing-04;
+  padding: $spacing-08 $spacing-16;
+  color: $basicWhite;
+  background-color: $textBlack;
+  border: none;
+  border-radius: $border-radius-16;
+}

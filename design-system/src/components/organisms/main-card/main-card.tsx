@@ -15,9 +15,10 @@ export class MainCard {
       <Host>
         <div class="img-container">
           <image-links image={this.image.source} alt={this.image.alt}></image-links>
-          <round-button border="round" class="button">
+
+          <save-button class="button">
             <fa-icons icon="folder-open"></fa-icons> Save
-          </round-button>
+          </save-button>
         </div>
         <div class="info">
           <card-titles head={this.cardinfo.head} author={this.cardinfo.author}></card-titles>

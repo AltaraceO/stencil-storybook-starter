@@ -57,6 +57,8 @@ export namespace Components {
         "text"?: string;
         "type"?: 'normal' | 'main';
     }
+    interface SaveButton {
+    }
     interface SearchBar {
         "buttons": string[];
         "value": string;
@@ -136,6 +138,12 @@ declare global {
         prototype: HTMLRoundButtonElement;
         new (): HTMLRoundButtonElement;
     };
+    interface HTMLSaveButtonElement extends Components.SaveButton, HTMLStencilElement {
+    }
+    var HTMLSaveButtonElement: {
+        prototype: HTMLSaveButtonElement;
+        new (): HTMLSaveButtonElement;
+    };
     interface HTMLSearchBarElement extends Components.SearchBar, HTMLStencilElement {
     }
     var HTMLSearchBarElement: {
@@ -166,6 +174,7 @@ declare global {
         "my-component": HTMLMyComponentElement;
         "nav-bar": HTMLNavBarElement;
         "round-button": HTMLRoundButtonElement;
+        "save-button": HTMLSaveButtonElement;
         "search-bar": HTMLSearchBarElement;
         "search-input": HTMLSearchInputElement;
         "text-links": HTMLTextLinksElement;
@@ -222,6 +231,8 @@ declare namespace LocalJSX {
         "text"?: string;
         "type"?: 'normal' | 'main';
     }
+    interface SaveButton {
+    }
     interface SearchBar {
         "buttons"?: string[];
         "onNewvalue"?: (event: CustomEvent<any>) => void;
@@ -246,6 +257,7 @@ declare namespace LocalJSX {
         "my-component": MyComponent;
         "nav-bar": NavBar;
         "round-button": RoundButton;
+        "save-button": SaveButton;
         "search-bar": SearchBar;
         "search-input": SearchInput;
         "text-links": TextLinks;
@@ -266,6 +278,7 @@ declare module "@stencil/core" {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "nav-bar": LocalJSX.NavBar & JSXBase.HTMLAttributes<HTMLNavBarElement>;
             "round-button": LocalJSX.RoundButton & JSXBase.HTMLAttributes<HTMLRoundButtonElement>;
+            "save-button": LocalJSX.SaveButton & JSXBase.HTMLAttributes<HTMLSaveButtonElement>;
             "search-bar": LocalJSX.SearchBar & JSXBase.HTMLAttributes<HTMLSearchBarElement>;
             "search-input": LocalJSX.SearchInput & JSXBase.HTMLAttributes<HTMLSearchInputElement>;
             "text-links": LocalJSX.TextLinks & JSXBase.HTMLAttributes<HTMLTextLinksElement>;

@@ -14,9 +14,9 @@ export class NavBar implements ComponentInterface {
   render() {
     return (
       <div class="container">
-        <img src={this.logo} alt="textuallogo" />
         <div class="spaces-between">
-          <image-link></image-link>
+          <img src={this.logo} alt="textuallogo" />
+          {/* <image-link></image-link> */}
           {this.links?.map((link: string) => {
             return (
               <text-links size="large" weight="400">
