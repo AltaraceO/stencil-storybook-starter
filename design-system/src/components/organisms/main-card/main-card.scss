@@ -12,3 +12,22 @@
   width: 100%;
   max-height: $spacing-64;
 }
+
+.img-container {
+  position: relative;
+}
+
+.button {
+  position: absolute;
+  top: 0;
+  display: none;
+  margin: $spacing-16;
+  color: white;
+  background-color: $textGrey;
+  border-radius: $border-radius-16;
+}
+
+image-links:hover + .button,
+.button:hover {
+  display: inline-block;
+}

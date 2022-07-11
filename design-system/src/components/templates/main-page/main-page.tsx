@@ -25,6 +25,7 @@ export class MainPage {
     return (
       <Host>
         <main-header
+          logo={this.header.logo}
           navLinks={this.header.navLinks}
           navButtons={this.header.navButtons}
           searchButtons={this.header.searchButtons}

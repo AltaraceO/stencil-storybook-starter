@@ -32,6 +32,7 @@ export namespace Components {
     }
     interface MainHeader {
         "headerButtons"?: { title: string; icon: string }[];
+        "logo"?: string;
         "navButtons"?: string[];
         "navLinks"?: string[];
         "searchButtons"?: string[];
@@ -48,6 +49,7 @@ export namespace Components {
         "buttons"?: string[];
         "image"?: { image: string; alt: string };
         "links"?: string[];
+        "logo"?: string;
     }
     interface RoundButton {
         "border"?: 'round' | 'square' | 'none';
@@ -195,6 +197,7 @@ declare namespace LocalJSX {
     }
     interface MainHeader {
         "headerButtons"?: { title: string; icon: string }[];
+        "logo"?: string;
         "navButtons"?: string[];
         "navLinks"?: string[];
         "searchButtons"?: string[];
@@ -211,6 +214,7 @@ declare namespace LocalJSX {
         "buttons"?: string[];
         "image"?: { image: string; alt: string };
         "links"?: string[];
+        "logo"?: string;
     }
     interface RoundButton {
         "border"?: 'round' | 'square' | 'none';

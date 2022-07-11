@@ -9,10 +9,12 @@ export class NavBar implements ComponentInterface {
   @Prop() links?: string[];
   @Prop() buttons?: string[];
   @Prop() image?: { image: string; alt: string };
+  @Prop() logo?: string;
 
   render() {
     return (
       <div class="container">
+        <img src={this.logo} alt="textuallogo" />
         <div class="spaces-between">
           <image-link></image-link>
           {this.links?.map((link: string) => {

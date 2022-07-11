@@ -12,6 +12,7 @@ import * as flowerLady from '../../assets/card-imgs/flowerLady.jpg';
 import * as football from '../../assets/card-imgs/football.jpg';
 import * as giant from '../../assets/card-imgs/giant.jpg';
 import * as living from '../../assets/card-imgs/living.jpg';
+import * as logo from '../../assets/card-imgs/logo.png';
 import * as man from '../../assets/card-imgs/man.jpg';
 import * as mattress from '../../assets/card-imgs/mattress.jpg';
 import * as memphis from '../../assets/card-imgs/memphis.jpg';
@@ -33,6 +34,7 @@ const Template: Story<Components.MainPage> = ({ header, cards }) => {
 export const Default: Story<Components.MainPage> = Template.bind({});
 Default.args = {
   header: {
+    logo: logo,
     navLinks: ['Discover', 'Livestream', 'Jobs'],
     navButtons: ['Log In', 'Sign Up'],
     searchButtons: ['Projects', 'Images', 'Prototypes', 'Streams', 'People', 'Moodboards'],

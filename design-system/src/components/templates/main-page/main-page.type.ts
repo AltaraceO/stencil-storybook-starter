@@ -5,6 +5,7 @@ export interface Card {
 }
 
 export interface Header {
+  logo: string;
   navLinks: string[];
   navButtons: string[];
   searchButtons: string[];

@@ -13,7 +13,12 @@ export class MainCard {
   render() {
     return (
       <Host>
-        <image-links image={this.image.source} alt={this.image.alt}></image-links>
+        <div class="img-container">
+          <image-links image={this.image.source} alt={this.image.alt}></image-links>
+          <round-button border="round" class="button">
+            <fa-icons icon="folder-open"></fa-icons> Save
+          </round-button>
+        </div>
         <div class="info">
           <card-titles head={this.cardinfo.head} author={this.cardinfo.author}></card-titles>
           <card-icons like={this.cardicon.like} seen={this.cardicon.seen}></card-icons>
