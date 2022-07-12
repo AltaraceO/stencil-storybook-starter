@@ -11,9 +11,9 @@ export interface valueType {
   shadow: true,
 })
 export class SearchBar {
-  @Prop() buttons: string[];
+  @Prop() buttons?: string[];
   @Prop({ mutable: true }) value: string;
-  @Event() newvalue: EventEmitter;
+  @Event() newvalue: EventEmitter<string>;
 
   handleChange(event) {
     const val = event.target.value;
@@ -25,10 +25,11 @@ export class SearchBar {
     return (
       <div class="search-container">
         <div class="input-container">
-          <input onInput={(event) => this.handleChange(event)} value={this.value} placeholder="Search the creative world at work" type="text" />
+          <fa-icons icon="magnifying-glass"></fa-icons>
+          <input onInput={(event) => this.handleChange(event)} placeholder="Search the creative world at work" type="text" value={this.value} />
         </div>
         <div class="buttons-container">
-          {this.buttons.map((button: string) => {
+          {this.buttons?.map((button: string) => {
             return (
               <round-button type="normal" size="small" border="none">
                 {button}

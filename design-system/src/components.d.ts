@@ -60,7 +60,7 @@ export namespace Components {
     interface SaveButton {
     }
     interface SearchBar {
-        "buttons": string[];
+        "buttons"?: string[];
         "value": string;
     }
     interface SearchInput {
@@ -235,7 +235,7 @@ declare namespace LocalJSX {
     }
     interface SearchBar {
         "buttons"?: string[];
-        "onNewvalue"?: (event: CustomEvent<any>) => void;
+        "onNewvalue"?: (event: CustomEvent<string>) => void;
         "value"?: string;
     }
     interface SearchInput {
